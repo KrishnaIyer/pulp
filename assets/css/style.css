@@ -182,6 +182,27 @@ nav li {
   font-size: 18px;
 }
 
+#tags-on-posts ul {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+#tags-on-posts li a {
+  display: block;
+  height: 24px;
+  margin: 5px;
+  padding: 0 5px;
+  border-radius: 5px;
+  background-color: #222020;
+  font-size: 14px;
+  text-align: center;
+}
+
 #contentsList {
   padding: 20px 0;
 }
