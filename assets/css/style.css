@@ -165,22 +165,21 @@ nav li {
 #tags ul {
   max-width: 600px;
   margin: 0 auto;
-  display: flex;
+  display: inline-block;
   padding: 0;
-  justify-content: center;
+  justify-content: left;
   flex-wrap: wrap;
-  list-style: none;
+  list-style:decimal;
 }
 
 #tags li a {
-  display: block;
-  height: 24px;
-  margin: 5px;
-  padding: 0 5px;
+  display:flex;
+  height: 32px;
+  margin: 10px;
+  padding: 0 10px;
   background-color: #dddfdf;
-  border-radius: 5px;
-  font-size: 14px;
-  /* text-decoration: none; */
+  border-radius: 5 px;
+  font-size: 18px;
 }
 
 #contentsList {
