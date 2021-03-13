@@ -10,23 +10,23 @@
   <div id="searchResults"></div>
   <!-- tags -->
   <div id="tags">
-    <h3>Topics by Tags</h3>
+    <h3>Topics</h3>
     <ul>
-      {{ range .Site.Taxonomies.tags }}
-      <li><a href="{{ .Page.Permalink }}"> {{ .Page.Title }} ({{ .Count }})</a></li>
+      {{ range .Site.Taxonomies.tags.ByCount }}
+        <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }} ({{ .Count }})</a></li>
       {{ end }}
     </ul>
   </div>
   <!-- contents -->
   <div id="contentsList">
+    <h3>Posts</h3>
     {{ $listPageDateFormat := .Site.Params.listPageDateFormat | default "January, 2006"}}
     {{ range $index, $value := .Pages.GroupByDate $listPageDateFormat }}
-      {{ if (eq $index 0) }}
-      <h3> Latest </h3>
-        {{ range .Pages }}
-          <p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
-        {{ end }}
-      {{ end }}
+    {{ if (ne $index 0) }}
+    {{ end }}
+    {{ range .Pages }}
+      <p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
+    {{ end }}
     {{ end }}
   </div>
   {{ partial "footer.html" . }}
